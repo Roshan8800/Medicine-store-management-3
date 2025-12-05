@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "458720851006",
+    "firebase_url": "https://binayak-pharmacy-c4a0f-default-rtdb.firebaseio.com",
+    "project_id": "binayak-pharmacy-c4a0f",
+    "storage_bucket": "binayak-pharmacy-c4a0f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458720851006:android:3100950e26a88bdb1ecd6f",
+        "android_client_info": {
+          "package_name": "com.roshan.binayakstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458720851006-2dlrq5rpnep89vdfcpmkmn27f02fqhl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-HwQ6B1nDJ5w50hMZlJeaULNR0pW5Vs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458720851006-2dlrq5rpnep89vdfcpmkmn27f02fqhl3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

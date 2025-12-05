@@ -1,0 +1,181 @@
+The development server returned response error
+
+code: 500
+
+URL: https://8422dc81-90c2-4659-ab9e -8f6834acd6fb-00-1jseqri6mhops.riker.replit.dev
+
+/client/index.bundle?platform=android&dev=true &hot=false&lazy=true&transform.engine hermes &transform.bytecode=1&transform.routerRoot =app&transform.reactCompiler=true&unstable transform Profile hermes-stable
+
+Body:
+
+("type":"Unable To ResolveError", "originModu lePath":"/home/runner/workspace/client/screens/Barcode ScannerScreen.tsx","targetM oduleName":"expo-camera","message":"Unable to resolve module expo-camera from/
+
+home/runner/workspace/client/screens/Barcode ScannerScreen.tsx: expo-camera could not be found within the project or in these directories:\n node_modules\n\u001b[0m \u001b/90m 4 | \u001b/39m \u001b[36mimport\u001b[39m
+
+(useNavigation) \u001b[36mfrom\u001b(39m \u001b[32m\"@react-navigation /native\"\u001b/39m\u001b[33m;\u001b[39m\n \u001b[90m 5 [\u001b[39m
+
+\u001b(36mimport\u001b[39m (\u001b|33mNative Stack Navigation Prop \u001b/39m) \u001b[36mfrom\u001b[39m \u001b[32m\"@react-navigation/native-stack\"\u 001b[39m\u001b[33m;\u001b[39m\n\u001b[31m \u001b[1m>\u001b[22m\u001b|39m\u001b[90m 6 \u001b[39m \u001b[36mimport\u001b[39m
+
+(\u001b[33mCameraView\u001b[39m\u001 b[33m,\u001b|39m use CameraPermissions) \u001b/36mfrom\u001b[39m \u001b/32m\ "expo-camera\"\u001b[39m\u001b[33m; \u001b/39m\n \u001b[90m (\u001b[39m \u001b(31m\u001b[1m^\u001b[22m\u 001b[39m\n \u001b[90m 7 \u001b(39m \u001b/36mimport\u001b[39m { \u001b|33mFeather\u001b(39m} \u001b/36mfrom\u001b/39m
+
+\u001b[32m\"@expo/vector -icons\"\u001b/39m\u001b[33m;\u001b[39m\n \u001b/90m 8 \u001b/39m\n \u001b[90m 9 \u001b[39m \u001b[36mimport\u001b[39m { \u001b[33mThemedText\u001b[39m) \u001b|36mfrom\u001b[39m \u001b[32m\"@ /components/ThemedText\"\u001b[39m\u001b [33m;\u001b/39m\u001b[0m",cause":["dirPaths": '/home/runner/workspace/client/screens/node
+
+_modules","/home/runner/workspace/client /node_modules","/home/runner/workspace/node _modules","/home/runner/node_modules","/home /node_modules","/node_modules"],"extraPaths": [ expolmportStack":"\u001b[1mimport stack:\u001b/22m\n\n\u001b[90m \u001b/39mclient/screens/
+
+Barcode ScannerScreen.tsx\n\u001b[90m \u001b/39m \u001b[36mimport\u001b[39m \u001b/32m\"expo-camera\"\u001b/39m\n\n \u001b[90m \u001b|39mclient/navigation/RootStackNavigator.tsx\n\u001b[90m | \u001b/39m \u001b[36mimport\u001b[39m \u001b[32m\"../screens/Barcode Scanne rScreen\"\u001b[39m\n\n\u001b[90m \u001b/39mclient/App.tsx\n\u001b[90m | \u001b/39m \u001b|36mimport\u001b[39m
+
+\u001b/32m\"./navigation/RootStackNavigator
+
+\"\u001b[39m\n\n\u001b[90m\u001b[39mclient/
+
+index.js\n\u001b[90m /\u001b|39m
+
+\u001b(36mimport\u001b(39m \u001b[32m\"./App\"\u001b(39m\n\n\u001b[90m \u001b[39m\n\u001b[90m \u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"./client/index\"\u001b[39m\n","name":"Error" "message": "Module does not exist in the Haste module map or in these directories: \n/home/runner/workspace/client/screens/node_modules\n /home/runner/workspace/
+
+client/node_modules\n /home/runner/
+
+workspace/node_modules\n /home/runner/node_modules\n /home/node_modules\n/node_modules\n","stack": "Error: Module does not exist in the Haste module map or in these directories:\n /home/runner/workspace/client/screens/node_modules\n /home/runner/workspace/client/node_modules\n/home/runner/workspace/node_modules\n /
+
+home/runner/node_modules\n /home/
+
+node_modules\n /node_modules\n\n at upstreamResolveRequest (/home/runner/workspace/node_modules/metro-resolver/src/resolve.js:197:9)\n at resolveRequest (/home/runner/workspace/node_modules/expo /node_modules/@expo/cli/src/start/server /metro/withMetroResolvers.ts:89:20)\n at upstreamResolveRequest (/home/runner/workspace/node_modules/metro-resolver/
+
+src/resolve.js:40:12)\n at firstResolver (/home/runner/workspace/node_modules/expo /node_modules/@expo/cli/src/start/server /metro/withMetroResolvers.ts:89:20)\n at firstResolver (/home/runner/workspace/node _modules/expo/node_modules/@expo/cli/src /start/server/metro/withMetroResolvers.ts: 103: 16)\n at firstResolver (/home/runner/workspace /node_modules/expo/node_modules/@expo/cli
+
+/src/start/server/metro/withMetroResolvers ts:132:16)\n at resolveRequest (/home /runner/workspace/node_modules/expo /node_modules/@expo/cli/src/start/server /metro/withMetro ErrorReportingResolver runner/workspace/node_modules/ts:60:23)\n at Object.resolve(/home/
+
+metro-resolver/src/resolve.js:40:12)\n at
+
+ModuleResolver.resolveDependency (/
+
+home/runner/workspace/node_modules/
+
+metro/src/node-haste/DependencyGraph/
+
+Module Resolution.js:96:31)\n at
+
+DependencyGraph.resolveDependency (/home/
+
+runner/workspace/node_modules/metro/src/
+
+node-haste/DependencyGraph.js:252:43)"),"nam
+
+e":"Error","stack":"Error: Unable to resolve module
+
+expo-camera from/home/runner/workspace/
+
+client/screens/Barcode ScannerScreen.tsx:
+
+expo-camera could not be found within
+
+the project or in these directories:\n
+
+node_modules\n\u001b[0m \u001b[90m 4
+
+\u001b/39m \u001b|36mimport\u001b/39m
+
+(useNavigation) \u001b[36mfrom\u001b(39m \u001b|32m\"@react-navigation /native\"\u001b/39m\u001b[33m;\u001b/39m\n \u001b/90m 5 \u001b[39m \u001b|36mimport\u001b[39m { \u001b[33mNative Stack Navigation Prop u001b/39m)\u001b|36mfrom\u001b|39m \u001b[32m\"@react-navigation/native-stack\"\u 001b/39m\u001b[33m;\u001b[39m\n\u001b[31m
+
+\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 \u001b[39m \u001b[36mimport\u001b[39m
+
+{ \u001b|33mCameraView\u001b|39m\u001b [33m,\u001b[39m useCameraPermissions) \u001b(36mfrom\u001b[39m \u001b[32m \"expo-camera\"\u001b[39m\u001b[33m; \u001b/39m\n \u001b[90m \u001b|39m \u001b/31m\u001b[1m^\u001b[22m\u001
+
+b[39m\n \u001b[90m 7 [\u001b[39m
+
+\u001b/36mimport\u001b[39m
+
+(\u001b|33mFeather\u001b[39m)
+
+\u001b/36mfrom\u001b[39m
+
+\u001b/32m\"@expo/vector -icons\"\u001b/39m\u001b[33m;\u001b[39m\n \u001b[90m 8 \u001b[39m\n \u001b[90m 9| \u001b(39m \u001b[36mimport\u001b[39m (\u001b[33mThemedText\u001b[39m) \u001b[36mfrom\u001b[39m \u001b[32m\"@
+
+/components/ThemedText\"\u001b/39m\u 001b[33m;\u001b[39m\u001b/0m\n at ModuleResolver.resolveDependency (/home/runner/workspace/node_modules/
+
+metro/src/node-haste/DependencyGraph/
+
+ModuleResolution.js:172:15)\n at
+
+DependencyGraph.resolveDependency (/home/runner/workspace/node_modules/metro/src/node-haste/DependencyGraph.js:252:43)\n at/home/runner/workspace/node_modules/metro/src/lib/transformHelpers.js:163:21\n at resolveDependencies (/home/runner/workspace/node_modules/metro/src/DeltaBundler/
+
+buildSubgraph.js:43:25)\n at visit (/home/
+
+runner/workspace/node_modules/metro/src/DeltaBundler/buildSubgraph.js:81:30)\n at async Promise.all (index 13)\n at visit (/home/runner/workspace/node_modules/metro/src/DeltaBundler/buildSubgraph.js:90:5)\n at async Promise.all (index 10)\n at visit (/home/runner/workspace/node_modules/metro/
+
+src/DeltaBundler/buildSubgraph.js:90:5)\n at async Promise.all (index 1)","errors": [("description":"Unable to resolve module expo-camera from/home/runner/workspace/client/screens/Barcode ScannerScreen.tsx:
+
+expo-camera could not be found within
+
+the project or in these directories:\n
+
+node_modules\n\u001b[0m \u001b|90m 4
+
+\u001b[39m \u001b|36mimport\u001b|39m (useNavigation) \u001b[36mfrom\u001b[39m \u001b[32m\"@react-navigation /native\"\u001b/39m\u001b[33m;\u001b[39m\n \u001b/90m 5 \u001b[39m
+
+\u001b(36mimport\u001b(39m (\u001b[33mNativeStackNavigation Prop\ u001b[39m) \u001b|36mfrom\u001b[39m \u001b[32m\"@react-navigation/native-stack\"\u 001b[39m\u001b[33m;\u001b|39m\n\u001b[31m \u001b[1m>\u001b[22m\u001b[39m\u001b[90m
+
+6 \u001b[39m \u001b[36mimport\u001b[39m (\u001b[33mCameraView\u001b[39m\u001b
+
+[33m,\u001b[39m useCameraPermissions) \u001b/36mfrom\u001b[39m \u001b/32m \ "expo-camera\"\u001b|39m\u001b[33m;
+
+\u001b/39m\n \u001b[90m \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001 b[39m\n \u001b[90m 7 (\u001b[39m
+
+\u001b[36mimport\u001b[39m (\u001b|33mFeather\u001b[39m) \u001b[36mfrom\u001b/39m
+
+\u001b/32m\"@expo/vector -icons\"\u001b/39m\u001b[33m;\u001b[39m\n
+
+\u001b/90m 8 \u001b[39m\n \u001b[90m 9 \u001b/39m \u001b[36mimport\u001b[39m
+
+{ \u001b[33mThemedText\u001b[39m \u001b/36mfrom\u001b|39m \u001b[32m\"@ /components/ThemedText\"\u001b[39m\u001b/3 3m;\u001b[39m\u001b[0m"}]}
+
+processBundleResult
+
+SourceFile:
+
+access$processBundleResult
+
+SourceFile:1
+
+onChunk Complete
+
+Sourcef Lle:63
+
+emit Chunk
+
+SourceFile:55
+
+readAllParts
+
+SourceFile: 240
+
+processMultipartResponse
+
+SourceFLie: 65
+
+access processMultipartResponse SourceFile: 1
+
+onResponse
+
+SourceFile:113
+
+run
+
+SourceFile:52
+
+runWorker ThreadPoolExecutor.java:1156
+
+run
+
+ThreadPoolExecutor.java:651
+
+run
+
+Thread.java:1119
+
+DISMISS
+
+(ESC)
+
+RELOAD
+
+(RR)

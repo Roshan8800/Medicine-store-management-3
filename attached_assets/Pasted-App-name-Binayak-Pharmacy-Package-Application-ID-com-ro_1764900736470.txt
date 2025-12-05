@@ -1,0 +1,386 @@
+App name: Binayak Pharmacy
+Package / Application ID: com.roshan.binayakstore
+Owner: Suman Sahu
+Created by: Roshan
+Support / Bug report: roshan8800jp@gmail.com
+Note: This is a personal medicine store management app (for inventory & operations). It is not for selling or ordering medicines online.
+
+
+---
+
+Summary
+
+Binayak Pharmacy is a premium, professional Android app for streamlined pharmacy management. It combines modern, high-quality UI/UX with powerful AI automation to handle billing, inventory, alerts, reporting, security and offline/online operation. The app focuses on reliability, performance, and usability for a single-store owner.
+
+
+---
+
+Visual & Interaction System (Design Requirements)
+
+Design a cohesive, modern, premium UI with layered motion and microinteractions:
+
+Cards: elevated, flat, expandable variants, used for items, invoices, reports.
+
+Backgrounds: images, gradients, blur, glassmorphism panels.
+
+Shadows & elevation: multiple elevation levels to indicate hierarchy.
+
+Transitions & page animations: smooth route transitions, shared element animations for item → detail flows.
+
+Skeleton screens: content skeletons for slow loads (lists, cards, invoices).
+
+Scroll behavior: momentum scrolling, infinite pagination, snapping where applicable (e.g., carousel, date pickers).
+
+Tab bars & indicators: clear, accessible tab states and animated indicators.
+
+Top app bar & bottom navigation: consistent hierarchy and affordances.
+
+Side navigation drawer: hamburger (☰) at top-right to open side menu with deeper functions.
+
+FAB (Floating Action Buttons): primary quick actions (add medicine, new bill).
+
+Segmented controls & chips: for quick filters (category, expiry, brand).
+
+Breadcrumbs, accordions, sliders, steppers & walkthroughs: for navigation and onboarding.
+
+Quick action menus / speed dials: fast access to common tasks (scan barcode, add supplier).
+
+Toasts, badges & notifications: contextual feedback, numeric badges for low stock/alerts.
+
+
+All UI must follow accessibility (contrast, touch targets, font scales) and be optimized for performance.
+
+
+---
+
+Core Functional Areas & Features
+
+1. AI-Powered Billing
+
+Automatic invoice generation via an AI agent.
+
+Barcode scanning for fast product entry.
+
+AI calculates discounts, taxes and totals; produces printable/exportable invoices.
+
+Templates for retail and wholesale billing.
+
+
+2. Full AI Control
+
+AI agent can manage inventory rules, trigger alerts, produce suggestions and generate reports.
+
+AI can propose restock orders, replacements, and optimizations based on trends.
+
+
+3. Inventory Management
+
+Master list of medicines with metadata (name, brand, batch, expiry, price, GST, supplier, storage location).
+
+Expiry tracking with automatic alerts and expiry reports.
+
+Low-stock alerts with threshold settings.
+
+Multi-level categorization: type, brand, strength, expiry date, aisle/rack.
+
+Bulk import/export (CSV, Excel) and manual entry (including barcode).
+
+
+4. Advanced AI Features (50+ capabilities — representative examples)
+
+Demand forecasting (predict stock needs from sales patterns).
+
+Auto-suggest reorder quantities and suppliers.
+
+Smart search with natural language queries (e.g., “paracetamol 500mg expiring next month”).
+
+Auto-detect price anomalies and suggest price corrections.
+
+Auto-tagging and categorization of new SKUs.
+
+
+5. Additional Features (20+)
+
+Daily / weekly / monthly / custom reports (sales, purchase, returns, expiry).
+
+Export reports to CSV, Excel, PDF.
+
+Dashboard with KPIs (revenue, margins, fast-moving items, expiring stock).
+
+Secure login (password + optional biometric).
+
+Local backup / restore and cloud backup options.
+
+Configurable notification rules for stock & expiry.
+
+Multi-user roles (owner, cashier, manager) with permission controls.
+
+
+6. Offline & Online Operation
+
+Full offline capability for billing and inventory; syncs when online.
+
+Conflict resolution logic for concurrent edits.
+
+
+
+---
+
+App Structure & Key Screens (50+ screens)
+
+Must include, but not limited to:
+
+Splash screen (showing app icon/logo, owner name Suman Sahu, app name)
+
+Onboarding / walkthrough
+
+Login (password + biometric)
+
+Home / Dashboard
+
+Add/Edit Medicine (detailed form)
+
+Medicine List (filters, search)
+
+Medicine Detail (history, batches)
+
+Barcode Scanner (add / sell)
+
+Create Bill / POS screen
+
+Bill History & Detail / Print/Export invoice
+
+Supplier List / Add Supplier
+
+Purchase / Receive Goods screen
+
+Stock Adjustment / Transfer
+
+Expiry Management / Expiry Report
+
+Low Stock Alerts
+
+Forecasting & AI Suggestions screen
+
+Reports (daily/weekly/monthly/custom)
+
+Backup & Restore
+
+Settings (app, notifications, security)
+
+About screen (logo, app name, owner, created by, version)
+
+Support / Bug Report
+
+User Management & Roles
+
+Permissions screen
+
+Notifications center
+
+Empty state screens (custom illustrations & CTAs)
+
+Error state screens (with retry actions)
+
+Help & FAQ
+
+License / Terms & Conditions
+
+Audit Log / Activity history
+
+Side Drawer / Menu screens for deeper tools
+
+Plus many context-specific modals, dialogs, confirm screens (Ensure the final design covers 50+ unique flows and screens.)
+
+
+
+---
+
+Required Text & About Screens
+
+Splash: Show owner name “Suman Sahu”, app name “Binayak Pharmacy”, and logo/icon.
+
+About: App icon/logo, App name, Owner: “Suman Sahu”, Created by: Roshan, short app description, version string, support email.
+
+
+
+---
+
+Behavior & Logic (A → N)
+
+Provide clear, implementable logic for the app. Each item below should be fully documented and implemented in code / wireflows.
+
+A. Conditional logic (all if-else scenarios)
+
+Examples: If stock ≤ threshold → create low-stock alert; if offline → queue actions for sync; if invoice created while offline and duplicate bill ID exists on sync → generate conflict resolution dialog.
+
+
+B. Workflows
+
+Purchase workflow: Create PO → Receive goods → Update inventory → Generate purchase invoice → Close PO.
+
+Sales workflow: Add items (scan/manual) → apply discount/taxes → confirm payment → print/save invoice → update inventory & report.
+
+
+C. How each feature works
+
+Each screen/module should include input validation, DB transactions, fallbacks, and UI feedback. E.g., barcode scan: on-success locate SKU → show item card → add to cart; else show “not found” with add-new SKU quick action.
+
+
+D. Logic-based behaviors & interactions
+
+Autosave drafts for bills; undo for stock edits; debounce for search; optimistic UI updates with rollback on failure.
+
+
+E. Navigation flow
+
+Bottom navigation with 5 essential tabs (explicitly configured). Top-right hamburger (☰) opens side drawer with secondary features. Back button (←) consistent and predictable. Provide flow diagrams for primary flows (Billing → Payment → Receipt; Inventory → Item → Batch).
+
+
+F. App rules
+
+Single active cashier per device (configurable). All stock edits require supervisor approval if over threshold. Action audit trail always recorded.
+
+
+G. Terms & Conditions
+
+Built-in terms with versioning and mandatory acceptance on major updates; store acceptance timestamp and user ID.
+
+
+H. Working mechanisms
+
+Local database (SQLite / Room) as source-of-truth in offline mode; sync engine with cloud endpoint when online; conflict resolution policies.
+
+
+I. Performance optimization
+
+Lazy loading lists, pagination for large datasets, caching, database indexes, background sync, efficient image handling, compress and debounce operations, minimize re-renders.
+
+
+J. Security & permission management
+
+Data encryption at rest, secure local storage for credentials, biometric optional, role-based access control, permission prompts for camera (barcode), storage (backup), network. Secure API tokens and TLS for cloud sync.
+
+
+K. Notifications & their systems
+
+Local push for expiry and low stock; scheduled reminders; notification settings per event type; grouped notifications, in-app notification center.
+
+
+L. Permission handling
+
+Graceful fallbacks: if camera denied, provide manual barcode entry. Clear explanation modals when requesting sensitive permissions.
+
+
+M. Error handling
+
+Standardized error states: network, DB, permission, validation. Provide user-friendly messages + retry actions + logs for debugging. Telemetry for critical errors (opt-in).
+
+
+N. How the app reacts to user actions
+
+Immediate visual feedback (ripple, toast), optimistic updates, confirmations for destructive actions, undo options for recent changes.
+
+
+
+---
+
+Data, Storage & Sync
+
+Local DB: normalized schema for items, batches, transactions, users, activity logs.
+
+Backups: local file export / import, encrypted cloud backup.
+
+Sync: two-way sync with conflict detection/resolution.
+
+Export formats: CSV, Excel, PDF for invoices & reports.
+
+
+
+---
+
+Security & Compliance
+
+Encrypt sensitive data at rest.
+
+Role-based access (owner, manager, cashier).
+
+Log audit trail for critical operations.
+
+Strong password policies and optional biometric sign-in.
+
+Clear terms & privacy accessible in the app.
+
+
+
+---
+
+Performance & Reliability
+
+Efficient queries, background workers for heavy tasks, incremental sync, offline queue, skeleton screens, memory optimizations, and image compression.
+
+
+
+---
+
+Notifications & Alerts
+
+Configurable alerts for low stock, expiry, backup reminders, sync failures, and important AI suggestions. Provide suppression windows and quiet hours.
+
+
+
+---
+
+UX Details & Empty/Error States
+
+Implement well-designed empty states with clear CTA (e.g., “Add your first medicine”).
+
+Error states should show reason, recovery steps, and a contact link to support.
+
+
+
+---
+
+Onboarding & Help
+
+Guided walkthrough (first launch) using steppers explaining core flows (billing, scanning, inventory).
+
+In-app help and searchable FAQ.
+
+Report bug / request support linking to roshan8800jp@gmail.com.
+
+
+
+---
+
+Navigation & Bottom Bar
+
+Bottom navigation: show exactly 5 essential tabs (primary flows like Home/Dashboard, Billing/POS, Inventory, Reports, Settings).
+
+Top-right hamburger (☰) to open side drawer for secondary tools (suppliers, backups, advanced AI tools).
+
+Include persistent back button (←) semantics.
+
+
+
+---
+
+Deliverables & Expectations
+
+Fully documented UI/UX spec, wireframes & prototype.
+
+Implementation-ready component library for cards, lists, forms, dialogs, toasts, and skeletons.
+
+50+ completed screen designs and flow diagrams.
+
+End-to-end logic & pseudo-code for A→N behaviors (conditional logic, workflows, error handling, sync).
+
+Testing checklist for offline/online, permission scenarios, security, and performance.
+
+
+
+---
+
+Short Conclusion (Polished)
+
+Binayak Medicine Store is a robust, AI-driven, offline-capable pharmacy management app with a premium UI/UX, comprehensive inventory & billing features, and enterprise-grade logic for security, sync and performance. It gives store owners (Suman Sahu) full control while minimizing manual effort and errors — created by Roshan.

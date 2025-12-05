@@ -1,0 +1,64 @@
+entrypoint = "README.md"
+modules = ["nodejs-20", "web"]
+
+[nix]
+channel = "stable-25_05"
+
+[deployment]
+deploymentTarget = "cloudrun"
+build = ["sh", "-c", "npm run expo:static:build && npm run server:build"]
+run = ["npm", "run", "server:prod"]
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+
+[[ports]]
+localPort = 8081
+externalPort = 80
+
+[[ports]]
+localPort = 8082
+externalPort = 3000
+
+[env]
+PORT = "5000"
+
+[agent]
+stack = "EXPO"
+integrations = ["javascript_database:1.0.0", "javascript_gemini:1.0.0"]
+expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start dev servers"
+
+[[workflows.workflow]]
+name = "Start dev servers"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run all:dev"
+waitForPort = 8081
+ensurePreviewReachable = "/status"
+
+[userenv]
+
+[userenv.shared]
+EXPO_PUBLIC_FIREBASE_API_KEY = "AIzaSyA-HwQ6B1nDJ5w50hMZlJeaULNR0pW5Vs8"
+EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN = "binayak-pharmacy-c4a0f.firebaseapp.com"
+EXPO_PUBLIC_FIREBASE_PROJECT_ID = "binayak-pharmacy-c4a0f"
+EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET = "binayak-pharmacy-c4a0f.firebasestorage.app"
+EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID = "458720851006"
+EXPO_PUBLIC_FIREBASE_APP_ID = "1:458720851006:android:3100950e26a88bdb1ecd6f"
+EXPO_PUBLIC_FIREBASE_DATABASE_URL = "https://binayak-pharmacy-c4a0f-default-rtdb.firebaseio.com"
+
